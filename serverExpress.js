@@ -58,3 +58,9 @@ app.get("/abracadabra/conejo/:n", (req, res) => {
         res.redirect('/voldemort.jpg')
     }
 })
+
+// Crear una ruta genérica que devuelva un mensaje diciendo “Esta página no existe...” al consultar una ruta que no esté definida en el servidor.
+app.get("*", (req, res) => {
+    // Paso 2
+    res.send("<center><h1>Esta ruta no existe...</h1> </center>");
+});
