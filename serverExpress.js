@@ -42,8 +42,7 @@ app.use('/abracadabra/juego/:usuario', (req, res, next) => {
 // En caso de ser exitoso, permitir el paso a la ruta GET correspondiente, de lo contrario devolver la imagen “who.jpeg”.
 
 app.get('/abracadabra/juego/:usuario', (req, res) => {
-    const nombre = req.params.usuario
-    res.send(nombre)
+    res.redirect('/')
 })
 
 // Crear una ruta /abracadabra/conejo/:n que valide si el parámetro “n” coincide con el número generado de forma aleatoria.
